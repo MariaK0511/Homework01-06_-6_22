@@ -31,7 +31,7 @@ public class Realization {
             Arrays.sort(chars2);
             Arrays.equals(chars, chars2);
             System.out.println(new String(chars));
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
             throw new SequenceException();
         }
     }
@@ -40,14 +40,15 @@ public class Realization {
             if (numDoc.startsWith("555")) {
                 System.out.println(numDoc.startsWith("555"));
             }
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
             throw new BeginningStringException(e);
+
         }
     }
     public static void endString(String numDoc) throws EndStringException {
         try {
             System.out.println(numDoc.startsWith("1a2b"));
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
             throw new EndStringException(e);
         }
     }

@@ -3,7 +3,7 @@ package strings_task1;
 import java.util.Locale;
 
 public class Main {
-    public static void main(String[] args) throws SequenceException, BeginningStringException, EndStringException {
+    public static void main(String[] args)  {
         /*
         1.Написать программу со следующим функционалом:
 На вход передать строку (будем считать, что это номер документа). +
@@ -26,8 +26,20 @@ public class Main {
         Realization.Replace(numDoc);
         Realization.Extraction(numDoc);
         Realization.lettersExtraction(numDoc);
-        Realization.sequenceOfString(numDoc);
-        Realization.beginningOfString(numDoc);
-        Realization.endString(numDoc);
+        try {
+            Realization.sequenceOfString(numDoc);
+        } catch (SequenceException e) {
+            e.getMessage();
+        }
+        try {
+            Realization.beginningOfString(numDoc);
+        } catch (BeginningStringException e) {
+            e.getMessage();
+        }
+        try {
+            Realization.endString(numDoc);
+        } catch (EndStringException e) {
+            e.getMessage();
+        }
     }
 }
