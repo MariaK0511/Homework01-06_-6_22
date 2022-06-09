@@ -35,8 +35,6 @@ public class Realization {
             throw new SequenceException();
         }
     }
-
-
     public static void beginningOfString(String numDoc) throws BeginningStringException {
         try {
             if (numDoc.startsWith("555")) {
