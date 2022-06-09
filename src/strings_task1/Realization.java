@@ -23,20 +23,34 @@ public class Realization {
                 sb.substring(19, 20) + "/" + sb.substring(21));
     }
 
-    public static void sequenceOfString(String numDoc) {
-        char[] chars = numDoc.toUpperCase().toCharArray();
-        char[] chars2 = numDoc.toLowerCase().toCharArray();
-        Arrays.sort(chars);
-        Arrays.sort(chars2);
-        chars.equals(chars2);
-        System.out.println(new String(chars));
+    public static void sequenceOfString(String numDoc) throws SequenceException {
+        try {
+            char[] chars = numDoc.toUpperCase().toCharArray();
+            char[] chars2 = numDoc.toLowerCase().toCharArray();
+            Arrays.sort(chars);
+            Arrays.sort(chars2);
+            Arrays.equals(chars, chars2);
+            System.out.println(new String(chars));
+        } catch (Exception e) {
+            throw new SequenceException();
+        }
     }
 
-    public static void beginningOfString(String numDoc) {
-        System.out.println(numDoc.startsWith("555"));
-    }
 
-    public static void endString(String numDoc) {
-        System.out.println(numDoc.startsWith("1a2b"));
+    public static void beginningOfString(String numDoc) throws BeginningStringException {
+        try {
+            if (numDoc.startsWith("555")) {
+                System.out.println(numDoc.startsWith("555"));
+            }
+        } catch (Exception e) {
+            throw new BeginningStringException(e);
+        }
+    }
+    public static void endString(String numDoc) throws EndStringException {
+        try {
+            System.out.println(numDoc.startsWith("1a2b"));
+        } catch (Exception e) {
+            throw new EndStringException(e);
+        }
     }
 }
