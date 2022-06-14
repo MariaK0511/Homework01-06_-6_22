@@ -24,17 +24,15 @@ public class Realization {
     }
 
     public static void sequenceOfString(String numDoc) throws SequenceException {
-        try {
             char[] chars = numDoc.toUpperCase().toCharArray();
             char[] chars2 = numDoc.toLowerCase().toCharArray();
             Arrays.sort(chars);
             Arrays.sort(chars2);
-            Arrays.equals(chars, chars2);
-            System.out.println(new String(chars));
-            // тебе надо проверить чере иф елсе, и тогда бросать ошибку у тебя тут не броситс RuntimeException который ты ловиь в catch
-        } catch (RuntimeException e) {
-            throw new SequenceException();
-        }
+            if(Arrays.equals(chars, chars2)) {
+                System.out.println(new String(chars));
+            }else {
+                throw new SequenceException();
+            }
     }
     public static void beginningOfString(String numDoc) throws BeginningStringException {
         try {

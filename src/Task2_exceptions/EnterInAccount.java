@@ -3,24 +3,14 @@ package Task2_exceptions;
 import java.util.Scanner;
 
 public class EnterInAccount {
-    String login;
-    String password;
-    String confirmPassword;
-
-    public EnterInAccount(String login, String password, String confirmPassword) {
-        this.login = login;
-        this.password = password;
-        this.confirmPassword = confirmPassword;
-    }
-
-    public static boolean checkParameters(String login, String password, String confirmPassword) throws WrongLoginException, WrongPasswordException {
+    public static boolean checkParameters(String login, String password, String confirmPassword) {
         try {
-            if (login.length() < 20 && login.trim().isEmpty()) {
+            if (login.length() < 20 && !login.contains(" ")) {
                 System.out.println(login);
             } else {
                 throw new WrongLoginException("wrong login");
             }
-            if (password.length() < 20 && password.matches("0-9") && password.equals(confirmPassword)) {
+            if (password.length() < 20 && password.matches("\\p{Alnum}*") && password.equals(confirmPassword) && !password.contains(" ")) {
                 System.out.println(password);
                 System.out.println(confirmPassword);
             } else {

@@ -3,7 +3,7 @@ package Task2_exceptions;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws WrongLoginException, WrongPasswordException {
+    public static void main(String[] args) {
         /*
         2. Создать класс, в котором будет статический метод.
 Этот метод принимает на вход три параметра: Login, Password, confirmPassword.+
