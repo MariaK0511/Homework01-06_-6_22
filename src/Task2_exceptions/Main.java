@@ -21,6 +21,6 @@ WrongPasswordException и WrongLoginException - пользовательские
 Метод возвращает true, если значения верны или false в другом случае.
          */
         Scanner sc = new Scanner(System.in);
-        EnterInAccount.parameters(sc.nextLine(), sc.nextLine(), sc.nextLine());
+        EnterInAccount.checkParameters(sc.nextLine(), sc.nextLine(), sc.nextLine());
     }
 }

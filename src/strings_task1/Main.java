@@ -23,20 +23,21 @@ public class Main {
         Realization.Replace(numDoc);
         Realization.Extraction(numDoc);
         Realization.lettersExtraction(numDoc);
+
         try {
             Realization.sequenceOfString(numDoc);
         } catch (SequenceException e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
         }
         try {
             Realization.beginningOfString(numDoc);
         } catch (BeginningStringException e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
         }
         try {
             Realization.endString(numDoc);
         } catch (EndStringException e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
         }
     }
 }
