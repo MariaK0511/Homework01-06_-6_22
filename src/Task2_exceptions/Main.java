@@ -22,6 +22,5 @@ WrongPasswordException и WrongLoginException - пользовательские
          */
         Scanner sc = new Scanner(System.in);
         EnterInAccount.parameters(sc.nextLine(), sc.nextLine(), sc.nextLine());
-
     }
 }

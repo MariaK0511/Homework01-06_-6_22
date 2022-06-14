@@ -1,7 +1,5 @@
 package strings_task1;
 
-import java.util.Locale;
-
 public class Main {
     public static void main(String[] args)  {
         /*
@@ -21,7 +19,6 @@ public class Main {
 которые на вход (входным параметром) будут принимать вводимую на вход программы строку. +
          */
         String numDoc = "2345-Ert-6685-sVM-9g7X";
-        Realization realization = new Realization();
         Realization.Substring(numDoc);
         Realization.Replace(numDoc);
         Realization.Extraction(numDoc);

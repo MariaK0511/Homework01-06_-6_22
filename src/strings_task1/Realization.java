@@ -31,6 +31,7 @@ public class Realization {
             Arrays.sort(chars2);
             Arrays.equals(chars, chars2);
             System.out.println(new String(chars));
+            // тебе надо проверить чере иф елсе, и тогда бросать ошибку у тебя тут не броситс RuntimeException который ты ловиь в catch
         } catch (RuntimeException e) {
             throw new SequenceException();
         }
